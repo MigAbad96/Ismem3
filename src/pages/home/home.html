@@ -6,8 +6,8 @@
 
 <ion-content padding>
  
-    <h2>Miguel Abad Espinoza</h2>
-    <img src="https://media.licdn.com/dms/image/C4E03AQEw0SgQqCopsA/profile-displayphoto-shrink_200_200/0?e=1544659200&v=beta&t=Kw--VmxIs2nH0rDJ1U9xcdcEuXiqfx7JatRUIZL6cWA" alt="">
+    <h2 text-center>Miguel Abad Espinoza</h2>
+    <img  src="https://media.licdn.com/dms/image/C4E03AQEw0SgQqCopsA/profile-displayphoto-shrink_200_200/0?e=1544659200&v=beta&t=Kw--VmxIs2nH0rDJ1U9xcdcEuXiqfx7JatRUIZL6cWA" alt="">
 
   <button ion-button full (click)="tomarFoto()">
     <ion-icon name="camera">
@@ -15,8 +15,11 @@
     Grabar el momento
   </button>
 
-  <img [src]="base64Image" *ngIf="base64Image" alt="" />
 
+  <ion-row col-6 *ngFor="let foto of fotos">
+    <img [src]="foto" *ngIf="foto" alt="" />
+  </ion-row>
+  
 
   <img src="assets/imgs/450_1000.jpg" alt="">
   <p>
