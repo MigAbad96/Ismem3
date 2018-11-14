@@ -19,5 +19,13 @@
       <p>Miguel Evaristo Abad espinoza</p>
       <p>912 541 461</p>
 
+      <div *ngFor="let post of data">
+
+        <h2 [innerHTML]="post.title.rendered"></h2>
+        <p [innerHTML]="post.content.rendered"></p>
+        <br>
+
+      </div>
+
   </ion-list>
 </ion-content>
